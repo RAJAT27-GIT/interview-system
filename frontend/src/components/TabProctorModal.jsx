@@ -1,0 +1,165 @@
+export default function TabProctorModal({ violations, maxViolations, visible, onDismiss }) {
+  if (!visible) return null;
+
+  const remaining = maxViolations - violations;
+  const severity =
+    violations >= maxViolations ? "terminated" :
+    violations === maxViolations - 1 ? "danger" : "warning";
+
+  const config = {
+    warning: {
+      bg: "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)",
+      border: "#d97706",
+      icon: "⚠️",
+      title: "Tab Switch Detected!",
+      text: `Warning ${violations}/${maxViolations}. Please stay on this tab during the interview.`,
+      btnClass: "warn-btn",
+      btnText: "I Understand",
+    },
+    danger: {
+      bg: "linear-gradient(135deg, #f97316 0%, #ea580c 100%)",
+      border: "#c2410c",
+      icon: "🚨",
+      title: "Final Warning!",
+      text: `This is your LAST warning (${violations}/${maxViolations}). One more tab switch and your interview will be automatically terminated!`,
+      btnClass: "danger-btn",
+      btnText: "I Won't Switch Again",
+    },
+    terminated: {
+      bg: "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)",
+      border: "#991b1b",
+      icon: "🛑",
+      title: "Interview Terminated",
+      text: "You exceeded the maximum number of tab switches. Your interview has been automatically submitted with current progress.",
+      btnClass: "term-btn",
+      btnText: "View Results",
+    },
+  };
+
+  const c = config[severity];
+
+  return (
+    <div className="proctor-overlay">
+      <div className="proctor-modal" style={{ border: `3px solid ${c.border}` }}>
+        <div className="proctor-modal-header" style={{ background: c.bg }}>
+          <span className="proctor-icon">{c.icon}</span>
+          <h3 className="proctor-title">{c.title}</h3>
+        </div>
+        <div className="proctor-modal-body">
+          <p className="proctor-text">{c.text}</p>
+
+          {severity !== "terminated" && (
+            <div className="violation-meter">
+              <div className="meter-label">Violations: {violations} / {maxViolations}</div>
+              <div className="meter-track">
+                <div
+                  className="meter-fill"
+                  style={{
+                    width: `${(violations / maxViolations) * 100}%`,
+                    background: severity === "danger" ? "#ef4444" : "#f59e0b",
+                  }}
+                />
+              </div>
+            </div>
+          )}
+
+          <button className={`proctor-btn ${c.btnClass}`} onClick={onDismiss}>
+            {c.btnText}
+          </button>
+        </div>
+      </div>
+
+      <style>{`
+        .proctor-overlay {
+          position: fixed;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(6px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 99999;
+          animation: fadeIn 0.2s ease;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .proctor-modal {
+          background: #fff;
+          border-radius: 20px;
+          width: 90%;
+          max-width: 460px;
+          overflow: hidden;
+          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+          animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+          from { transform: translateY(30px) scale(0.95); opacity: 0; }
+          to { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        .proctor-modal-header {
+          padding: 28px 24px;
+          text-align: center;
+          color: white;
+        }
+        .proctor-icon {
+          font-size: 3rem;
+          display: block;
+          margin-bottom: 8px;
+        }
+        .proctor-title {
+          margin: 0;
+          font-size: 1.5rem;
+          font-weight: 800;
+        }
+        .proctor-modal-body {
+          padding: 24px;
+          text-align: center;
+        }
+        .proctor-text {
+          color: #475569;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin-bottom: 20px;
+        }
+        .violation-meter {
+          margin-bottom: 20px;
+        }
+        .meter-label {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: #64748b;
+          margin-bottom: 6px;
+        }
+        .meter-track {
+          height: 10px;
+          background: #e2e8f0;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        .meter-fill {
+          height: 100%;
+          border-radius: 10px;
+          transition: width 0.4s ease;
+        }
+        .proctor-btn {
+          padding: 12px 36px;
+          border-radius: 12px;
+          border: none;
+          font-weight: 700;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: all 0.2s;
+          color: white;
+        }
+        .warn-btn { background: #f59e0b; }
+        .warn-btn:hover { background: #d97706; }
+        .danger-btn { background: #ea580c; }
+        .danger-btn:hover { background: #c2410c; }
+        .term-btn { background: #ef4444; }
+        .term-btn:hover { background: #dc2626; }
+      `}</style>
+    </div>
+  );
+}

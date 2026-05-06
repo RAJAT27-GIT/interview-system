@@ -1,0 +1,311 @@
+Python
+Java
+C++
+C
+JavaScript
+TypeScript
+React
+Next.js
+Vue.js
+Angular
+Node.js
+Express
+HTML
+CSS
+Tailwind CSS
+Bootstrap
+SASS
+Django
+Flask
+FastAPI
+PyTorch
+TensorFlow
+Keras
+OpenCV
+Pandas
+NumPy
+Scikit-learn
+SQL
+PostgreSQL
+MySQL
+MongoDB
+Redis
+GraphQL
+REST API
+Git
+GitHub
+GitLab
+Docker
+Kubernetes
+AWS
+Azure
+GCP
+Linux
+Bash
+Unit Testing
+Jest
+Cypress
+Selenium
+CI/CD
+Jenkins
+Machine Learning
+Deep Learning
+NLP
+Computer Vision
+Data Analysis
+Algorithms
+Data Structures
+System Design
+Redux
+Context API
+WebRTC
+WebSockets
+Security
+Authentication
+JWT
+OAuth
+Microservices
+Serverless
+Firebase
+Supabase
+Prisma
+TypeORM
+Mongoose
+Strapi
+Three.js
+D3.js
+Solidity
+Blockchain
+Mobile Development
+React Native
+Flutter
+Swift
+Kotlin
+UI/UX
+Figma
+Project Management
+Agile
+Scrum
+Jira
+Communication
+Problem Solving
+Analytical
+Teamwork
+Leadership
+Critical Thinking
+Creative
+Adaptability
+Time Management
+Public Speaking
+Documentation
+English
+Hindi
+Technical Writing
+Soft Skills
+Hard Skills
+Programming
+Software Development
+Web Development
+App Development
+Full Stack
+Frontend
+Backend
+DevOps
+Quality Assurance
+Testing
+Database Management
+Cloud Computing
+Security Engineering
+Networking
+Operating Systems
+Virtualization
+API Integration
+Data Visualization
+Cloud Infrastructure
+Infrastructure as Code
+Terraform
+Ansible
+Prometheus
+Grafana
+ELK Stack
+Kafka
+RabbitMQ
+Spark
+Hadoop
+Big Data
+Business Intelligence
+CRM
+ERP
+Salesforce
+SAP
+Tableau
+Power BI
+Excel
+Word
+Office 365
+Adobe Creative Cloud
+Graphic Design
+Motion Graphics
+Video Editing
+Digital Marketing
+SEO
+SEM
+Social Media
+Copywriting
+Content Strategy
+Public Relations
+Sales
+Business Development
+Strategic Planning
+Market Research
+Financial Analysis
+HR
+Recruitment
+Talent Acquisition
+Operations
+Supply Chain
+Manufacturing
+Logistics
+Customer Success
+Customer Support
+Hospitality
+Event Planning
+Education
+Training
+Research
+Science
+Health Care
+Nursing
+Medical
+Legal
+Accounting
+Auditing
+Finance
+Investments
+Insurance
+Real Estate
+Construction
+Engineering
+Architecture
+Design
+Arts
+Media
+Journalism
+Law
+Social Work
+Non-profit
+Government
+Politics
+International Relations
+Economics
+Sociology
+Psychology
+Philosophy
+History
+Geography
+Math
+Physics
+Chemistry
+Biology
+Environmental Science
+Sustainability
+Energy
+Utilities
+Transport
+Automotive
+Aviation
+Defense
+Aerospace
+Retail
+Ecommerce
+Fashion
+Beauty
+Food & Beverage
+Travel
+Sports
+Entertainment
+Gaming
+Music
+Film
+Photography
+Art
+Literature
+Translation
+Interpretation
+Library Science
+Museum Studies
+Archaeology
+Curator
+Archivist
+Linguistics
+Theology
+Humanities
+Social Sciences
+Natural Sciences
+Physical Sciences
+Formal Sciences
+Applied Sciences
+Interdisciplinary
+General
+Experience
+Skills
+Education
+Projects
+Achievements
+Languages
+Interests
+References
+Summary
+Objective
+Goal
+Headline
+Bio
+Introduction
+Contact Info
+Email
+Phone
+LinkedIn
+GitHub
+Portfolio
+Website
+Blog
+Twitter
+Instagram
+Facebook
+YouTube
+Medium
+Dev.to
+FreeCodeCamp
+Coursera
+Udemy
+LinkedIn Learning
+Certification
+License
+Award
+Honor
+Fellowship
+Scholarship
+Grant
+Publication
+Conference
+Seminar
+Workshop
+Training Program
+Course
+Bootcamp
+Degree
+Diploma
+Certificate
+Transcript
+GPA
+Major
+Minor
+Internship
+Apprenticeship
+Volunteering
+Community Service
+Extracurriculars
+Hobbies
+Interests
+References Available Upon Request
+The above content shows the entire, complete file contents of the requested file.

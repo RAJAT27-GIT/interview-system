@@ -1,0 +1,448 @@
+[
+  {
+    "id": "q001",
+    "text": "Explain the difference between supervised and unsupervised learning.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["ml", "ai"],
+    "model_answer": "Supervised learning uses labeled data for training where the model learns to map inputs to known outputs. Unsupervised learning finds hidden patterns in unlabeled data without predefined output labels, using techniques like clustering and dimensionality reduction.",
+    "keywords": ["labeled data", "unlabeled data", "patterns", "training", "clustering"]
+  },
+  {
+    "id": "q002",
+    "text": "What is REST API?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["web", "api"],
+    "model_answer": "REST API is an architectural style for designing networked applications. It uses standard HTTP methods (GET, POST, PUT, DELETE) to perform CRUD operations on resources identified by URLs. It is stateless, meaning each request contains all necessary information.",
+    "keywords": ["HTTP", "resources", "stateless", "CRUD", "architecture", "URL"]
+  },
+  {
+    "id": "q003",
+    "text": "What is the difference between a stack and a queue?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["dsa"],
+    "model_answer": "A stack follows Last-In-First-Out (LIFO) principle where the last element added is the first removed. A queue follows First-In-First-Out (FIFO) principle where the first element added is the first removed.",
+    "keywords": ["LIFO", "FIFO", "push", "pop", "enqueue", "dequeue"]
+  },
+  {
+    "id": "q004",
+    "text": "Explain what HTML, CSS, and JavaScript do in web development.",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["web", "frontend"],
+    "model_answer": "HTML provides the structure and content of a web page using elements and tags. CSS handles the visual presentation, layout, colors, and responsive design. JavaScript adds interactivity, dynamic behavior, and handles user events and API calls.",
+    "keywords": ["structure", "presentation", "interactivity", "elements", "layout", "dynamic"]
+  },
+  {
+    "id": "q005",
+    "text": "What is the difference between HTTP and HTTPS?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["web", "networking"],
+    "model_answer": "HTTP transmits data in plain text, making it vulnerable to interception. HTTPS adds SSL/TLS encryption on top of HTTP, encrypting data in transit. HTTPS uses port 443 while HTTP uses port 80.",
+    "keywords": ["encryption", "SSL", "TLS", "plain text", "secure", "certificate"]
+  },
+  {
+    "id": "q006",
+    "text": "What is SQL and what are the basic SQL commands?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["database", "sql"],
+    "model_answer": "SQL (Structured Query Language) is used to manage relational databases. Basic commands include: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE, and JOIN.",
+    "keywords": ["SELECT", "INSERT", "UPDATE", "DELETE", "relational", "database"]
+  },
+  {
+    "id": "q007",
+    "text": "What is Object-Oriented Programming? Explain its four pillars.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["oop", "programming"],
+    "model_answer": "OOP is a programming paradigm based on objects containing data and methods. The four pillars are: Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+    "keywords": ["encapsulation", "abstraction", "inheritance", "polymorphism", "objects", "classes"]
+  },
+  {
+    "id": "q008",
+    "text": "Explain the concept of Time Complexity and Big-O notation.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["dsa", "algorithms"],
+    "model_answer": "Time complexity measures how an algorithm's runtime grows with input size. Big-O notation describes the upper bound of growth rate. Common: O(1), O(log n), O(n), O(n log n), O(n²).",
+    "keywords": ["Big-O", "runtime", "input size", "constant", "linear", "quadratic", "logarithmic"]
+  },
+  {
+    "id": "q009",
+    "text": "What is the difference between SQL and NoSQL databases?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["database"],
+    "model_answer": "SQL databases are relational, use structured schemas with tables. NoSQL databases are non-relational, support flexible schemas (document, key-value, graph), scale horizontally.",
+    "keywords": ["relational", "schema", "ACID", "document", "key-value", "horizontal scaling"]
+  },
+  {
+    "id": "q010",
+    "text": "What is the difference between process and thread?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["os", "system"],
+    "model_answer": "A process is an independent program with its own memory space. A thread is a lightweight unit within a process sharing memory. Threads communicate directly, processes need IPC.",
+    "keywords": ["memory space", "lightweight", "IPC", "independent", "shared memory", "execution"]
+  },
+  {
+    "id": "q011",
+    "text": "What are React hooks? Explain useState and useEffect.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["frontend", "react"],
+    "model_answer": "React hooks allow functional components to use state and lifecycle features. useState manages state. useEffect handles side effects like API calls.",
+    "keywords": ["functional components", "state", "side effects", "useState", "useEffect", "lifecycle"]
+  },
+  {
+    "id": "q012",
+    "text": "What are closures in JavaScript?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["javascript", "frontend"],
+    "model_answer": "A closure is a function that retains access to its outer scope's variables even after the outer function has finished executing.",
+    "keywords": ["outer scope", "variables", "data privacy", "function", "lexical scope", "retain access"]
+  },
+  {
+    "id": "q013",
+    "text": "What is Docker and how does containerization work?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["devops", "tools"],
+    "model_answer": "Docker is a platform for running applications in containers. Containers package code with dependencies. Unlike VMs, containers share the host OS kernel.",
+    "keywords": ["containers", "lightweight", "Dockerfile", "image", "dependencies", "OS kernel"]
+  },
+  {
+    "id": "q014",
+    "text": "Explain the concept of hashing and hash tables.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["dsa"],
+    "model_answer": "Hashing maps data to fixed-size values. Hash tables store key-value pairs enabling O(1) lookups. Collisions handled via chaining or open addressing.",
+    "keywords": ["hash function", "key-value", "O(1)", "collision", "chaining", "open addressing"]
+  },
+  {
+    "id": "q015",
+    "text": "Explain async/await and Promises in JavaScript.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["javascript", "frontend"],
+    "model_answer": "Promises represent async operation results with states: pending, fulfilled, rejected. Async/await is syntactic sugar making async code look synchronous.",
+    "keywords": ["asynchronous", "Promise", "pending", "fulfilled", "rejected", "async", "await"]
+  },
+  {
+    "id": "q016",
+    "text": "What is CORS and why is it important?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["web", "security"],
+    "model_answer": "CORS controls which domains can access server resources. Browsers enforce same-origin policy. CORS headers whitelist origins.",
+    "keywords": ["cross-origin", "same-origin policy", "Access-Control-Allow-Origin", "security", "browser"]
+  },
+  {
+    "id": "q017",
+    "text": "Explain the CAP theorem in distributed systems.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["system design", "distributed"],
+    "model_answer": "CAP theorem: a distributed system can guarantee at most two of Consistency, Availability, and Partition Tolerance. Partition tolerance is mandatory in practice.",
+    "keywords": ["consistency", "availability", "partition tolerance", "distributed", "CP", "AP"]
+  },
+  {
+    "id": "q018",
+    "text": "Design a URL shortening service like bit.ly.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["system design"],
+    "model_answer": "Use base62 encoding for short codes. Store mappings in DB. Scale with caching (Redis), sharding, load balancers. Handle collisions.",
+    "keywords": ["hash function", "base62", "redirect", "caching", "sharding", "load balancer"]
+  },
+  {
+    "id": "q019",
+    "text": "Explain microservices architecture vs monolithic architecture.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["system design", "architecture"],
+    "model_answer": "Monolithic packages everything as one unit. Microservices break into independent services communicating via APIs, each deployable independently.",
+    "keywords": ["independent services", "API communication", "scaling", "deployment", "decoupled"]
+  },
+  {
+    "id": "q020",
+    "text": "What is dynamic programming? Explain with an example.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["dsa", "algorithms"],
+    "model_answer": "DP solves problems by breaking into overlapping subproblems and storing solutions. Two approaches: top-down (memoization) and bottom-up (tabulation).",
+    "keywords": ["overlapping subproblems", "memoization", "tabulation", "optimal substructure", "Fibonacci"]
+  },
+  {
+    "id": "q021",
+    "text": "Explain garbage collection in Java/Python.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["programming", "system"],
+    "model_answer": "GC automatically reclaims unused memory. Python uses reference counting + cyclic GC. Java uses generational GC with Mark-and-Sweep.",
+    "keywords": ["reference counting", "mark-and-sweep", "generational", "memory", "cyclic", "automatic"]
+  },
+  {
+    "id": "q022",
+    "text": "Explain indexing in databases.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["database", "optimization"],
+    "model_answer": "Indexes are data structures (B-tree, hash) that speed up retrieval. They trade write performance for faster reads. Types: primary, secondary, composite.",
+    "keywords": ["B-tree", "lookup", "read performance", "write tradeoff", "composite index"]
+  },
+  {
+    "id": "q023",
+    "text": "Design a rate limiter for an API.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["system design", "api"],
+    "model_answer": "Controls requests per time window. Algorithms: Token Bucket, Sliding Window, Fixed Window. Use Redis for distributed tracking. Return 429 when exceeded.",
+    "keywords": ["token bucket", "sliding window", "fixed window", "Redis", "429", "throttle"]
+  },
+  {
+    "id": "q024",
+    "text": "What is Git and explain basic Git workflow?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["tools", "devops"],
+    "model_answer": "Git is a distributed version control system. Basic workflow: init, add, commit, push, pull, branch, merge.",
+    "keywords": ["version control", "commit", "branch", "merge", "push", "pull", "distributed"]
+  },
+  {
+    "id": "q025",
+    "text": "What is the difference between TCP and UDP?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["networking"],
+    "model_answer": "TCP is connection-oriented, reliable, ordered. UDP is connectionless, fast, unreliable. TCP for web/email, UDP for streaming/gaming.",
+    "keywords": ["connection-oriented", "connectionless", "reliable", "unreliable", "ordered", "fast"]
+  },
+
+  {
+    "id": "q031",
+    "text": "Tell me about a time you faced a difficult technical challenge and how you solved it.",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["behavioral", "communication"],
+    "model_answer": "Describe a specific situation, the technical hurdle, steps taken to fix it, and the outcome/lesson learned.",
+    "keywords": ["challenge", "problem solving", "analysis", "lesson", "resolution"]
+  },
+  {
+    "id": "q032",
+    "text": "How do you handle conflict or disagreements within a team setting?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["behavioral", "communication"],
+    "model_answer": "Focus on open communication, active listening, objective reasoning, and finding compromise.",
+    "keywords": ["conflict", "teamwork", "communication", "listening", "professionalism"]
+  },
+  {
+    "id": "q033",
+    "text": "Where do you see yourself in five years professionally?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["behavioral", "communication"],
+    "model_answer": "Demonstrate ambition, alignment with career path, desire for continuous learning.",
+    "keywords": ["future", "goals", "ambition", "growth", "career path"]
+  },
+  {
+    "id": "q034",
+    "text": "Why should we hire you for this position?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["behavioral", "communication"],
+    "model_answer": "Highlight unique skills, relevant experience, and how you can add value.",
+    "keywords": ["value", "skills", "experience", "fit", "contribution"]
+  },
+  {
+    "id": "q035",
+    "text": "What are your greatest strengths and weaknesses?",
+    "type": "theory",
+    "difficulty": "easy",
+    "tags": ["behavioral", "communication"],
+    "model_answer": "Strengths should be relevant. Weaknesses should be genuine with improvement plan.",
+    "keywords": ["strengths", "weaknesses", "improvement", "self-awareness"]
+  },
+
+  {
+    "id": "q040",
+    "text": "If a train travels 60 km in 40 minutes, what is its speed in km/h?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["aptitude", "logic"],
+    "model_answer": "Speed = Distance/Time = 60/(40/60) = 60/0.667 = 90 km/h.",
+    "keywords": ["speed", "distance", "time", "90", "km/h"]
+  },
+  {
+    "id": "q041",
+    "text": "What comes next in the series: 2, 6, 12, 20, 30, ?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["aptitude", "logic"],
+    "model_answer": "The differences are 4, 6, 8, 10, 12. Next number = 30 + 12 = 42.",
+    "keywords": ["series", "pattern", "differences", "42"]
+  },
+  {
+    "id": "q042",
+    "text": "A project has 10 tasks. If 3 people can finish 6 tasks in 4 days, how many days for 2 people to finish 10 tasks?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["aptitude", "logic"],
+    "model_answer": "3 people do 6 tasks in 4 days = 0.5 tasks/person/day. 2 people = 1 task/day. 10 tasks = 10 days.",
+    "keywords": ["work", "rate", "people", "days", "10"]
+  },
+  {
+    "id": "q043",
+    "text": "What is the probability of getting at least one head when flipping 3 coins?",
+    "type": "theory",
+    "difficulty": "medium",
+    "tags": ["aptitude", "logic"],
+    "model_answer": "P(at least 1 head) = 1 - P(no heads) = 1 - (1/2)^3 = 1 - 1/8 = 7/8 = 0.875.",
+    "keywords": ["probability", "complement", "7/8", "coins", "heads"]
+  },
+
+  {
+    "id": "code_easy_01",
+    "text": "Write a function that takes a list of numbers and returns the sum of all even numbers in the list.",
+    "type": "coding",
+    "difficulty": "easy",
+    "tags": ["coding", "arrays"],
+    "starter_code": {
+      "python": "def sum_even(numbers):\n    # Write your code here\n    pass",
+      "javascript": "function sumEven(numbers) {\n    // Write your code here\n}",
+      "cpp": "#include <vector>\nusing namespace std;\n\nint sumEven(vector<int> numbers) {\n    // Write your code here\n    return 0;\n}"
+    },
+    "test_cases": [
+      {"input": "[1, 2, 3, 4, 5, 6]", "expected_output": "12"},
+      {"input": "[10, 15, 20, 25]", "expected_output": "30"},
+      {"input": "[1, 3, 5, 7]", "expected_output": "0"},
+      {"input": "[]", "expected_output": "0"}
+    ],
+    "model_answer": "Filter even numbers and sum them.",
+    "keywords": ["even", "sum", "modulo", "filter"]
+  },
+  {
+    "id": "code_easy_02",
+    "text": "Write a function to check if a given string is a palindrome (reads same forwards and backwards). Ignore case.",
+    "type": "coding",
+    "difficulty": "easy",
+    "tags": ["coding", "strings"],
+    "starter_code": {
+      "python": "def is_palindrome(s):\n    # Write your code here\n    pass",
+      "javascript": "function isPalindrome(s) {\n    // Write your code here\n}",
+      "cpp": "#include <string>\nusing namespace std;\n\nbool isPalindrome(string s) {\n    // Write your code here\n    return false;\n}"
+    },
+    "test_cases": [
+      {"input": "\"racecar\"", "expected_output": "True"},
+      {"input": "\"Hello\"", "expected_output": "False"},
+      {"input": "\"Madam\"", "expected_output": "True"},
+      {"input": "\"a\"", "expected_output": "True"}
+    ],
+    "model_answer": "Compare string with its reverse, case-insensitive.",
+    "keywords": ["palindrome", "reverse", "case", "comparison"]
+  },
+  {
+    "id": "code_med_01",
+    "text": "Write a function that takes an array of integers and returns the two numbers that add up to a given target. Return them as a list [num1, num2].",
+    "type": "coding",
+    "difficulty": "medium",
+    "tags": ["coding", "arrays", "hashmap"],
+    "starter_code": {
+      "python": "def two_sum(nums, target):\n    # Write your code here\n    pass",
+      "javascript": "function twoSum(nums, target) {\n    // Write your code here\n}",
+      "cpp": "#include <vector>\nusing namespace std;\n\nvector<int> twoSum(vector<int> nums, int target) {\n    // Write your code here\n    return {};\n}"
+    },
+    "test_cases": [
+      {"input": "[2, 7, 11, 15], 9", "expected_output": "[2, 7]"},
+      {"input": "[3, 2, 4], 6", "expected_output": "[2, 4]"},
+      {"input": "[1, 5, 3, 7], 8", "expected_output": "[1, 7]"}
+    ],
+    "model_answer": "Use a hashmap to store complement values for O(n) solution.",
+    "keywords": ["two sum", "hashmap", "complement", "O(n)"]
+  },
+  {
+    "id": "code_med_02",
+    "text": "Write a function to find the longest substring without repeating characters. Return the length.",
+    "type": "coding",
+    "difficulty": "medium",
+    "tags": ["coding", "strings", "sliding window"],
+    "starter_code": {
+      "python": "def longest_unique_substring(s):\n    # Write your code here\n    pass",
+      "javascript": "function longestUniqueSubstring(s) {\n    // Write your code here\n}",
+      "cpp": "#include <string>\nusing namespace std;\n\nint longestUniqueSubstring(string s) {\n    // Write your code here\n    return 0;\n}"
+    },
+    "test_cases": [
+      {"input": "\"abcabcbb\"", "expected_output": "3"},
+      {"input": "\"bbbbb\"", "expected_output": "1"},
+      {"input": "\"pwwkew\"", "expected_output": "3"},
+      {"input": "\"\"", "expected_output": "0"}
+    ],
+    "model_answer": "Use sliding window with a set to track characters.",
+    "keywords": ["sliding window", "set", "substring", "unique"]
+  },
+  {
+    "id": "code_hard_01",
+    "text": "Write a function to find the maximum sum of a contiguous subarray (Kadane's Algorithm).",
+    "type": "coding",
+    "difficulty": "hard",
+    "tags": ["coding", "dsa", "arrays"],
+    "starter_code": {
+      "python": "def max_subarray_sum(nums):\n    # Write your code here\n    pass",
+      "javascript": "function maxSubarraySum(nums) {\n    // Write your code here\n}",
+      "cpp": "#include <vector>\n#include <climits>\nusing namespace std;\n\nint maxSubarraySum(vector<int> nums) {\n    // Write your code here\n    return 0;\n}"
+    },
+    "test_cases": [
+      {"input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]", "expected_output": "6"},
+      {"input": "[1]", "expected_output": "1"},
+      {"input": "[-1, -2, -3]", "expected_output": "-1"},
+      {"input": "[5, 4, -1, 7, 8]", "expected_output": "23"}
+    ],
+    "model_answer": "Kadane's algorithm: track current max and global max, reset current when negative.",
+    "keywords": ["Kadane", "subarray", "contiguous", "maximum sum", "dynamic programming"]
+  },
+  {
+    "id": "code_hard_02",
+    "text": "Write a function to merge two sorted arrays into one sorted array without using built-in sort.",
+    "type": "coding",
+    "difficulty": "hard",
+    "tags": ["coding", "dsa", "arrays"],
+    "starter_code": {
+      "python": "def merge_sorted(arr1, arr2):\n    # Write your code here\n    pass",
+      "javascript": "function mergeSorted(arr1, arr2) {\n    // Write your code here\n}",
+      "cpp": "#include <vector>\nusing namespace std;\n\nvector<int> mergeSorted(vector<int> arr1, vector<int> arr2) {\n    // Write your code here\n    return {};\n}"
+    },
+    "test_cases": [
+      {"input": "[1, 3, 5], [2, 4, 6]", "expected_output": "[1, 2, 3, 4, 5, 6]"},
+      {"input": "[1, 2, 3], []", "expected_output": "[1, 2, 3]"},
+      {"input": "[], [4, 5]", "expected_output": "[4, 5]"},
+      {"input": "[1, 1], [1, 1]", "expected_output": "[1, 1, 1, 1]"}
+    ],
+    "model_answer": "Use two pointers, compare elements, merge into result array.",
+    "keywords": ["merge", "two pointers", "sorted", "O(n+m)"]
+  },
+  {
+    "id": "dsa_hard_01",
+    "text": "Explain how a binary search tree works and its time complexities for insertion, deletion, and search.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["dsa", "trees"],
+    "model_answer": "BST stores data where left child < parent < right child. Average case O(log n) for all ops, worst case O(n) for skewed trees. Balanced BSTs like AVL/Red-Black maintain O(log n).",
+    "keywords": ["BST", "binary search", "O(log n)", "balanced", "AVL", "insertion", "deletion"]
+  },
+  {
+    "id": "dsa_hard_02",
+    "text": "What is a graph? Explain BFS and DFS traversal algorithms.",
+    "type": "theory",
+    "difficulty": "hard",
+    "tags": ["dsa", "graphs"],
+    "model_answer": "Graph is nodes connected by edges. BFS uses queue, explores level-by-level (shortest path). DFS uses stack/recursion, explores depth-first (cycle detection, topological sort).",
+    "keywords": ["BFS", "DFS", "queue", "stack", "traversal", "shortest path", "cycle"]
+  }
+]
