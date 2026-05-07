@@ -8,8 +8,8 @@
 **Project Title:** AI-Powered Multi-Round Interview System  
 **Frameworks Used:** MERN Stack (React, Node, Express, MongoDB) + Python (FastAPI)  
 **AI Integration:** Groq (Llama 3 & Whisper), Google gTTS  
-**Developed By:** [Your Name]  
-**Roll No:** [Your Roll No]  
+**Developed By:** [Prashant Kashyap, Prashant Pal, Rajaat Chadda, Ritik Chaudhary]  
+**Roll No:** [2200650100070, 2200650100074, 2200650100084, 2200650100087]  
 **Session:** 2025-2026  
 **Department:** Computer Science & Engineering  
 
@@ -23,8 +23,8 @@ This is to certify that the project titled **"AI-Powered Multi-Round Interview S
 
 The project incorporates modern full-stack development practices, AI-driven automation, and real-time proctoring systems. It has been successfully tested and implemented.
 
-**Date:** 05 May 2026  
-**Place:** [Your City/Institute]  
+**Date:** 07 May 2026  
+**Place:** [Mathura/BSA College of engineering and technology Mathura]  
 
 ---
 
