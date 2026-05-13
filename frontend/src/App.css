@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
   overflow-x: hidden;
 }
 
@@ -16,6 +19,8 @@ body {
   user-select: none;
   -webkit-user-select: none;
   cursor: default;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 input,
@@ -29,16 +34,55 @@ select,
 
 .app-wrapper {
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Cards & Hovers */
+/* ── Responsive Container Helpers ── */
+.container {
+  width: 100%;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Premium Glassmorphism Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07) !important;
+}
+
+/* Enhanced Hover Text */
+.hover-text {
+  position: relative;
+}
+
+.hover-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.hover-text:hover::after {
+  width: 100%;
+}
+
 .hover-text:hover {
   color: #3b82f6 !important;
-  transition: 0.2s ease;
 }
 
+/* Premium Shadows & Transitions */
 .hover-shadow {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hover-shadow:hover {
@@ -48,7 +92,7 @@ select,
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -70,6 +114,8 @@ select,
   background-color: #ffffff !important;
   color: #1e293b !important;
   border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-control:focus,
@@ -86,6 +132,8 @@ audio {
   border-radius: 10px;
   background: #f1f5f9;
   height: 45px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .badge {
@@ -96,4 +144,89 @@ a,
 button {
   transition: all 0.2s ease;
   cursor: pointer;
+}
+
+/* ── Global Responsive Utilities ── */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+}
+
+/* ── Mobile-specific global fixes ── */
+@media (max-width: 768px) {
+  .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .display-3, .display-4 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .lead {
+    font-size: 1rem !important;
+  }
+
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .mt-5 {
+    margin-top: 2rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  .p-5 {
+    padding: 1.25rem !important;
+  }
+
+  .p-4 {
+    padding: 1rem !important;
+  }
+
+  h1 { font-size: 1.85rem !important; letter-spacing: -0.5px !important; }
+  h2 { font-size: 1.55rem !important; }
+  h3 { font-size: 1.3rem !important; }
+
+  .btn-lg {
+    padding: 12px 24px !important;
+    font-size: 0.95rem !important;
+    border-radius: 14px !important;
+  }
+
+  /* Make all tables horizontally scrollable on mobile */
+  .table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  /* Fix d-flex wrapping on mobile */
+  .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .gap-3 {
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-3, .display-4 {
+    font-size: 1.6rem !important;
+  }
+
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }

@@ -333,6 +333,71 @@ const ResumeCheck = () => {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+          .resume-bg { padding-top: 1.5rem !important; padding-bottom: 1rem !important; }
+
+          .text-gradient-purple {
+            font-size: 1.7rem !important;
+          }
+
+          .rc-card:hover {
+            transform: none;
+          }
+
+          .drop-zone {
+            padding: 32px 16px;
+          }
+
+          .drop-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+          }
+
+          .score-ring {
+            width: 110px;
+            height: 110px;
+            font-size: 2.2rem;
+          }
+
+          .skill-pill {
+            padding: 7px 12px;
+            font-size: 0.85rem;
+          }
+
+          /* Full width columns on mobile */
+          .col-lg-4, .col-lg-8, .col-md-6 {
+            width: 100% !important;
+          }
+
+          .col-md-8 {
+            width: 100% !important;
+          }
+
+          .rc-card-body.p-4 {
+            padding: 14px !important;
+          }
+
+          .w-75 {
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .text-gradient-purple {
+            font-size: 1.4rem !important;
+          }
+
+          .drop-zone {
+            padding: 24px 12px;
+          }
+
+          .analyze-btn {
+            font-size: 0.95rem;
+            padding: 12px !important;
+          }
+        }
       `}</style>
     </>
   );

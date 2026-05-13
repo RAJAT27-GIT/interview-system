@@ -508,11 +508,11 @@ const Interview = () => {
 
         /* Round Info Cards */
         .round-info-row {
-          display: flex; justify-content: center; gap: 16px;
+          display: flex; justify-content: center; gap: 12px;
           margin-top: 20px; flex-wrap: wrap;
         }
         .round-info-card {
-          padding: 10px 24px; border-radius: 12px;
+          padding: 10px 20px; border-radius: 12px;
           display: flex; flex-direction: column; align-items: center;
           border: 2px solid; font-weight: 700;
         }
@@ -527,14 +527,15 @@ const Interview = () => {
           background: #fef3c7; border: 1px solid #fbbf24;
           border-radius: 10px; padding: 10px 14px;
           font-size: 0.8rem; color: #92400e;
-          display: flex; align-items: center; margin-top: 12px;
+          display: flex; align-items: flex-start; gap: 8px; margin-top: 12px;
         }
 
         /* Proctor Status Bar */
         .proctor-bar {
           display: flex; justify-content: space-between; align-items: center;
-          background: #1e293b; color: #e2e8f0; padding: 10px 20px;
+          background: #1e293b; color: #e2e8f0; padding: 10px 16px;
           border-radius: 12px; margin-bottom: 16px; font-size: 0.85rem;
+          flex-wrap: wrap; gap: 8px;
         }
         .proctor-bar-left {
           display: flex; align-items: center; gap: 8px; font-weight: 600;
@@ -551,7 +552,8 @@ const Interview = () => {
         /* Round Tracker */
         .round-tracker {
           display: flex; justify-content: space-between;
-          margin-bottom: 16px; padding: 0 2px; gap: 6px;
+          margin-bottom: 16px; padding: 0 2px; gap: 5px;
+          overflow-x: auto;
         }
         .round-tab {
           flex: 1; text-align: center; padding: 12px 6px;
@@ -559,6 +561,7 @@ const Interview = () => {
           border: 1px solid #e2e8f0; transition: all 0.3s;
           display: flex; align-items: center; justify-content: center;
           font-weight: 600; color: #64748b; font-size: 0.85rem;
+          min-width: 44px;
         }
         .round-tab.active {
           background: #3b82f6; color: #fff;
@@ -574,8 +577,9 @@ const Interview = () => {
         /* Active Round Header */
         .active-round-header {
           background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-          color: white; padding: 16px 24px;
+          color: white; padding: 14px 20px;
           display: flex; justify-content: space-between; align-items: center;
+          flex-wrap: wrap; gap: 8px;
         }
 
         .result-scroll { max-height: 450px; overflow-y: auto; padding-right: 5px; }
@@ -584,10 +588,27 @@ const Interview = () => {
           content: ''; position: absolute; bottom: 0; left: 0;
           width: 60px; height: 4px; background: #3b82f6; border-radius: 2px;
         }
+
         @media (min-width: 768px) { .border-end-sm { border-right: 1px solid #e2e8f0; } }
+
         @media (max-width: 768px) {
           .round-tab-label { display: none !important; }
           .round-tab { padding: 10px 4px; }
+          .interview-bg { padding-top: 20px !important; padding-bottom: 20px !important; }
+          .ui-card { border-radius: 14px; }
+          .p-4 { padding: 14px !important; }
+          .p-5 { padding: 16px !important; }
+          .border-bottom-pulse { font-size: 1.5rem !important; }
+          .display-4 { font-size: 1.6rem !important; }
+          .col-md-5, .col-md-7 { width: 100% !important; }
+        }
+
+        @media (max-width: 480px) {
+          .round-info-row { gap: 8px; }
+          .round-info-card { padding: 8px 12px; font-size: 0.85rem; }
+          .proctor-bar { font-size: 0.78rem; padding: 8px 12px; }
+          .active-round-header { padding: 12px 14px; }
+          .active-round-header h5 { font-size: 1rem !important; }
         }
       `}</style>
     </>

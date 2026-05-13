@@ -71,7 +71,7 @@ const ResumeBuilder = () => {
           {/* Header */}
           <div className="text-center mb-4 mt-4">
             <h1 className="fw-bold display-4 text-gradient-green">Smart Resume Builder</h1>
-            <p className="text-secondary lead w-75 mx-auto" style={{ color: "#64748b" }}>
+            <p className="text-secondary lead rb-header-sub" style={{ color: "#64748b" }}>
               Build a professional, ATS-friendly resume in minutes.
               Choose a template, fill your details, and download as PDF.
             </p>
@@ -635,6 +635,96 @@ const ResumeBuilder = () => {
           justify-content: center;
           font-size: 12px;
           font-weight: 700;
+        }
+
+        /* ── Responsive Header ── */
+        .rb-header-sub {
+          max-width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        /* ── Mobile: stack form + preview vertically ── */
+        @media (max-width: 992px) {
+          .template-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .rb-bg { padding-top: 1.5rem !important; padding-bottom: 1rem !important; }
+
+          .rb-header-sub {
+            max-width: 100%;
+            font-size: 0.95rem;
+          }
+
+          .template-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+          }
+
+          .template-selector {
+            padding: 16px;
+          }
+
+          .rb-tabs {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .rb-tab {
+            padding: 13px 14px;
+            font-size: 0.88rem;
+          }
+
+          .rb-card-body {
+            padding: 16px;
+          }
+
+          /* Preview moves below form on mobile */
+          .col-lg-6 {
+            width: 100% !important;
+          }
+
+          .rb-card.sticky-top {
+            position: relative !important;
+            top: auto !important;
+          }
+
+          .resume-preview {
+            padding: 20px;
+            min-height: 300px;
+          }
+
+          .preview-name {
+            font-size: 1.3rem;
+          }
+
+          .array-card {
+            padding: 14px;
+          }
+
+          .display-4 {
+            font-size: 1.6rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .template-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+          }
+
+          .rb-tab {
+            padding: 11px 10px;
+            font-size: 0.82rem;
+          }
+
+          .download-btn {
+            font-size: 0.85rem;
+            padding: 6px 12px;
+          }
         }
       `}</style>
     </>

@@ -34,20 +34,20 @@ function Home({ onStartInterview }) {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="py-5" style={{ background: "linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%)", paddingBottom: "100px" }}>
-        <div className="container py-5 text-center mt-5">
-          <h1 className="display-3 fw-bold mb-4" style={{ letterSpacing: "-1px", color: "#0f172a" }}>
+      <section className="home-hero-section" style={{ background: "linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%)" }}>
+        <div className="container home-hero-inner">
+          <h1 className="home-hero-title">
             Get Interview-Ready with <br />
             <span style={{ color: "#3b82f6" }}>AI-Powered Tools</span>
           </h1>
-          <p className="lead mx-auto mb-5" style={{ maxWidth: "700px", color: "#475569" }}>
-            The ultimate platform to practice realistic voice interviews, build modern ATS-friendly resumes, and evaluate your existing CV — all inside one sleek aesthetic dashboard.
+          <p className="home-hero-sub mx-auto mb-5" style={{ color: "#475569" }}>
+            The ultimate platform to practice realistic voice interviews, build modern ATS-friendly resumes,
+            and evaluate your existing CV — all inside one sleek aesthetic dashboard.
           </p>
-          <div className="d-flex justify-content-center gap-3">
+          <div className="home-hero-btns">
             <button
               onClick={() => navigate("/interview")}
-              className="btn btn-lg fw-bold shadow-sm"
-              style={{ background: "#3b82f6", color: "#fff", padding: "14px 32px", borderRadius: "12px", border: "none" }}
+              style={{ background: "#3b82f6", color: "#fff", padding: "14px 32px", borderRadius: "12px", border: "none", fontWeight: "700", fontSize: "1rem", cursor: "pointer" }}
             >
               Start Free Mock
             </button>
@@ -55,8 +55,7 @@ function Home({ onStartInterview }) {
               onClick={() => {
                 document.getElementById("features-section")?.scrollIntoView({ behavior: "smooth" });
               }}
-              className="btn btn-lg fw-bold"
-              style={{ padding: "14px 32px", borderRadius: "12px", border: "1px solid #cbd5e1", color: "#475569", background: "white" }}
+              style={{ padding: "14px 32px", borderRadius: "12px", border: "1px solid #cbd5e1", color: "#475569", background: "white", fontWeight: "700", fontSize: "1rem", cursor: "pointer" }}
             >
               Explore Features
             </button>
@@ -66,25 +65,15 @@ function Home({ onStartInterview }) {
 
       <main>
         {/* FEATURES SECTION */}
-        <section id="features-section" className="py-5 mt-5">
+        <section id="features-section" className="home-features-section">
           <div className="container">
-            <h2 className="text-center fw-bold mb-5" style={{ fontSize: "2.5rem", color: "#0f172a" }}>Platform Features</h2>
-            <div className="row g-4">
+            <h2 className="text-center fw-bold mb-5" style={{ fontSize: "2rem", color: "#0f172a" }}>Platform Features</h2>
+            <div className="home-features-grid">
               {features.map((f, idx) => (
-                <div key={idx} className="col-md-6 col-lg-3 text-center">
-                  <div
-                    className="card h-100 p-4 hover-shadow"
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "18px",
-                      border: "1px solid #e2e8f0",
-                      boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)"
-                    }}
-                  >
-                    <div className="mb-4">{f.icon}</div>
-                    <h5 className="fw-bold mb-3" style={{ color: "#1e293b" }}>{f.title}</h5>
-                    <p className="mb-0" style={{ color: "#64748b" }}>{f.desc}</p>
-                  </div>
+                <div key={idx} className="home-feature-card hover-shadow">
+                  <div className="mb-4">{f.icon}</div>
+                  <h5 className="fw-bold mb-3" style={{ color: "#1e293b" }}>{f.title}</h5>
+                  <p className="mb-0" style={{ color: "#64748b" }}>{f.desc}</p>
                 </div>
               ))}
             </div>
@@ -92,25 +81,21 @@ function Home({ onStartInterview }) {
         </section>
 
         {/* DETAILS SECTION */}
-        <section className="py-5 my-5">
+        <section className="home-details-section">
           <div className="container">
-            <div className="row align-items-center mb-5">
-              <div className="col-lg-6 mb-4 mb-lg-0">
-                <div className="p-5" style={{ background: "#f0f9ff", borderRadius: "24px", border: "1px solid #bae6fd" }}>
-                  <h3 className="fw-bold mb-4" style={{ color: "#0369a1" }}>Interactive Voice Interviews</h3>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.8", color: "#334155" }}>
-                    Tired of generic coding pads? Experience a real interview simulation where an AI asks you dynamic questions based on your difficulty choice. 
-                    Speak directly into your microphone, get evaluated using multiple criteria (keywords, accuracy, similarity), and receive actionable feedback.
-                  </p>
-                </div>
+            <div className="home-details-grid">
+              <div className="home-detail-box" style={{ background: "#f0f9ff", border: "1px solid #bae6fd" }}>
+                <h3 className="fw-bold mb-4" style={{ color: "#0369a1" }}>Interactive Voice Interviews</h3>
+                <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "#334155" }}>
+                  Tired of generic coding pads? Experience a real interview simulation where an AI asks you dynamic questions based on your difficulty choice.
+                  Speak directly into your microphone, get evaluated using multiple criteria (keywords, accuracy, similarity), and receive actionable feedback.
+                </p>
               </div>
-              <div className="col-lg-6">
-                <div className="p-5" style={{ background: "#f0fdf4", borderRadius: "24px", border: "1px solid #bbf7d0" }}>
-                  <h3 className="fw-bold mb-4" style={{ color: "#15803d" }}>Intelligent Resume Studio</h3>
-                  <p style={{ fontSize: "1.1rem", lineHeight: "1.8", color: "#334155" }}>
-                    Your resume is the first point of contact. We provide a full Resume Builder with live preview, and an AI-driven Resume Checker that extracts skills and details from your uploaded PDF directly into analytics.
-                  </p>
-                </div>
+              <div className="home-detail-box" style={{ background: "#f0fdf4", border: "1px solid #bbf7d0" }}>
+                <h3 className="fw-bold mb-4" style={{ color: "#15803d" }}>Intelligent Resume Studio</h3>
+                <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "#334155" }}>
+                  Your resume is the first point of contact. We provide a full Resume Builder with live preview, and an AI-driven Resume Checker that extracts skills and details from your uploaded PDF directly into analytics.
+                </p>
               </div>
             </div>
           </div>
@@ -118,6 +103,128 @@ function Home({ onStartInterview }) {
       </main>
 
       <Footer />
+
+      <style>{`
+        .home-hero-section {
+          padding: 60px 0 80px;
+        }
+        .home-hero-inner {
+          text-align: center;
+          padding-top: 40px;
+        }
+        .home-hero-title {
+          font-weight: 800;
+          font-size: 3rem;
+          letter-spacing: -1px;
+          color: #0f172a;
+          margin-bottom: 1.5rem;
+          line-height: 1.15;
+        }
+        .home-hero-sub {
+          max-width: 700px;
+          font-size: 1.1rem;
+          line-height: 1.7;
+          margin-bottom: 2rem;
+        }
+        .home-hero-btns {
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+          flex-wrap: wrap;
+        }
+
+        .home-features-section {
+          padding: 60px 0;
+        }
+        .home-features-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+        .home-feature-card {
+          background: #ffffff;
+          border-radius: 18px;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+          padding: 28px 20px;
+          text-align: center;
+        }
+
+        .home-details-section {
+          padding: 40px 0 60px;
+        }
+        .home-details-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+        }
+        .home-detail-box {
+          border-radius: 24px;
+          padding: 36px 32px;
+        }
+
+        @media (max-width: 992px) {
+          .home-features-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          .home-hero-title {
+            font-size: 2.2rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .home-hero-section {
+            padding: 32px 0 48px;
+          }
+          .home-hero-title {
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+          }
+          .home-hero-sub {
+            font-size: 0.97rem;
+            max-width: 100%;
+            padding: 0 4px;
+          }
+          .home-hero-btns {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+          }
+          .home-hero-btns button {
+            width: 100%;
+            max-width: 320px;
+          }
+          .home-features-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+          }
+          .home-feature-card {
+            padding: 20px 14px;
+          }
+          .home-details-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+          }
+          .home-detail-box {
+            padding: 24px 20px;
+          }
+          .home-features-section {
+            padding: 36px 0;
+          }
+          .home-details-section {
+            padding: 20px 0 40px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .home-features-grid {
+            grid-template-columns: 1fr;
+          }
+          .home-hero-title {
+            font-size: 1.5rem;
+          }
+        }
+      `}</style>
     </div>
   );
 }

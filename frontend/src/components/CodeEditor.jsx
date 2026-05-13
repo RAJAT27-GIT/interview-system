@@ -429,6 +429,57 @@ export default function CodeEditor({ question, userName, onComplete }) {
         }
         .tc-key { font-weight: 600; color: #1e293b; }
         .tc-error { color: #dc2626; margin-top: 4px; font-size: 0.8rem; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+          .code-problem-card {
+            padding: 16px;
+          }
+          .problem-title {
+            font-size: 1rem;
+          }
+          .lang-selector {
+            flex-wrap: wrap;
+          }
+          .lang-btn {
+            padding: 7px 14px;
+            font-size: 0.85rem;
+          }
+          .editor-body {
+            min-height: 220px;
+          }
+          .code-textarea {
+            min-height: 220px;
+            font-size: 0.8rem;
+          }
+          .run-btn, .submit-code-btn {
+            padding: 10px 18px;
+            font-size: 0.9rem;
+            flex: 1;
+          }
+          .results-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .code-problem-card {
+            padding: 12px;
+          }
+          .code-actions {
+            flex-direction: column;
+          }
+          .run-btn, .submit-code-btn {
+            width: 100%;
+          }
+          .line-numbers {
+            min-width: 32px;
+            padding: 16px 6px;
+            font-size: 0.75rem;
+          }
+        }
       `}</style>
     </div>
   );

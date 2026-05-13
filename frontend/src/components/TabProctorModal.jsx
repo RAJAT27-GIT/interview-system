@@ -11,7 +11,7 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
       bg: "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)",
       border: "#d97706",
       icon: "⚠️",
-      title: "Tab Switch Detected!",
+      title: "Tab Switch!",
       text: `Warning ${violations}/${maxViolations}. Please stay on this tab during the interview.`,
       btnClass: "warn-btn",
       btnText: "I Understand",
@@ -21,16 +21,16 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
       border: "#c2410c",
       icon: "🚨",
       title: "Final Warning!",
-      text: `This is your LAST warning (${violations}/${maxViolations}). One more tab switch and your interview will be automatically terminated!`,
+      text: `This is your LAST warning (${violations}/${maxViolations}). One more switch and your interview will end!`,
       btnClass: "danger-btn",
-      btnText: "I Won't Switch Again",
+      btnText: "I Won't Switch",
     },
     terminated: {
       bg: "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)",
       border: "#991b1b",
       icon: "🛑",
-      title: "Interview Terminated",
-      text: "You exceeded the maximum number of tab switches. Your interview has been automatically submitted with current progress.",
+      title: "Terminated",
+      text: "You exceeded tab switches. Your interview has been submitted automatically.",
       btnClass: "term-btn",
       btnText: "View Results",
     },
@@ -73,12 +73,13 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
         .proctor-overlay {
           position: fixed;
           top: 0; left: 0; right: 0; bottom: 0;
-          background: rgba(0, 0, 0, 0.7);
-          backdrop-filter: blur(6px);
+          background: rgba(0, 0, 0, 0.75);
+          backdrop-filter: blur(8px);
           display: flex;
           align-items: center;
           justify-content: center;
           z-index: 99999;
+          padding: 16px;
           animation: fadeIn 0.2s ease;
         }
         @keyframes fadeIn {
@@ -87,53 +88,60 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
         }
         .proctor-modal {
           background: #fff;
-          border-radius: 20px;
-          width: 90%;
-          max-width: 460px;
+          border-radius: 24px;
+          width: 100%;
+          max-width: 440px;
           overflow: hidden;
-          box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-          animation: slideUp 0.3s ease;
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+          animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         @keyframes slideUp {
-          from { transform: translateY(30px) scale(0.95); opacity: 0; }
+          from { transform: translateY(40px) scale(0.9); opacity: 0; }
           to { transform: translateY(0) scale(1); opacity: 1; }
         }
         .proctor-modal-header {
-          padding: 28px 24px;
+          padding: 32px 24px;
           text-align: center;
           color: white;
         }
         .proctor-icon {
-          font-size: 3rem;
+          font-size: 3.5rem;
           display: block;
-          margin-bottom: 8px;
+          margin-bottom: 12px;
         }
         .proctor-title {
           margin: 0;
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           font-weight: 800;
+          letter-spacing: -0.5px;
         }
         .proctor-modal-body {
-          padding: 24px;
+          padding: 28px 24px;
           text-align: center;
         }
         .proctor-text {
           color: #475569;
-          font-size: 0.95rem;
+          font-size: 1rem;
           line-height: 1.6;
-          margin-bottom: 20px;
+          margin-bottom: 24px;
+          font-weight: 500;
         }
         .violation-meter {
-          margin-bottom: 20px;
+          margin-bottom: 24px;
+          background: #f1f5f9;
+          padding: 12px;
+          border-radius: 12px;
         }
         .meter-label {
           font-size: 0.8rem;
-          font-weight: 700;
+          font-weight: 800;
           color: #64748b;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
         }
         .meter-track {
-          height: 10px;
+          height: 8px;
           background: #e2e8f0;
           border-radius: 10px;
           overflow: hidden;
@@ -141,17 +149,22 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
         .meter-fill {
           height: 100%;
           border-radius: 10px;
-          transition: width 0.4s ease;
+          transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .proctor-btn {
-          padding: 12px 36px;
-          border-radius: 12px;
+          width: 100%;
+          padding: 14px;
+          border-radius: 14px;
           border: none;
           font-weight: 700;
           font-size: 1rem;
           cursor: pointer;
           transition: all 0.2s;
           color: white;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .proctor-btn:active {
+          transform: scale(0.98);
         }
         .warn-btn { background: #f59e0b; }
         .warn-btn:hover { background: #d97706; }
@@ -159,6 +172,15 @@ export default function TabProctorModal({ violations, maxViolations, visible, on
         .danger-btn:hover { background: #c2410c; }
         .term-btn { background: #ef4444; }
         .term-btn:hover { background: #dc2626; }
+
+        @media (max-width: 480px) {
+          .proctor-modal-header { padding: 24px 20px; }
+          .proctor-icon { font-size: 2.8rem; }
+          .proctor-title { font-size: 1.3rem; }
+          .proctor-modal-body { padding: 20px; }
+          .proctor-text { font-size: 0.9rem; margin-bottom: 18px; }
+          .proctor-btn { padding: 12px; font-size: 0.95rem; }
+        }
       `}</style>
     </div>
   );

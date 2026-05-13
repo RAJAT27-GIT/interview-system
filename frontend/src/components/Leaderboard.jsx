@@ -37,41 +37,88 @@ export default function Leaderboard() {
   }
 
   return (
-    <div className="table-responsive">
+    <div className="table-responsive leaderboard-container">
       <table className="table table-hover table-borderless mb-0">
-        <thead style={{ backgroundColor: "#f8fafc", borderBottom: "1px solid #e2e8f0" }}>
+        <thead className="leaderboard-thead">
           <tr>
-            <th className="py-3 px-4 text-slate-500 fw-bold" style={{ color: "#64748b" }}>Rank</th>
-            <th className="py-3 px-4 text-slate-500 fw-bold" style={{ color: "#64748b" }}>User</th>
-            <th className="py-3 px-4 text-end text-slate-500 fw-bold" style={{ color: "#64748b" }}>Score</th>
+            <th className="py-3 px-3 px-md-4 text-slate-500 fw-bold">Rank</th>
+            <th className="py-3 px-3 px-md-4 text-slate-500 fw-bold">User</th>
+            <th className="py-3 px-3 px-md-4 text-end text-slate-500 fw-bold">Score</th>
           </tr>
         </thead>
         <tbody>
           {data.map((entry, idx) => (
-            <tr key={idx} style={idx < 3 ? { backgroundColor: "#f0f9ff" } : {}}>
-              <td className="py-3 px-4 fw-bold" style={{ fontSize: "1.05rem", color: "#1e293b", borderBottom: "1px solid #f1f5f9" }}>
+            <tr key={idx} className="leaderboard-row" style={idx < 3 ? { backgroundColor: "#f0f9ff" } : {}}>
+              <td className="py-3 px-3 px-md-4 fw-bold rank-cell">
                 {getMedal(idx)}
               </td>
-              <td className="py-3 px-4 fw-medium" style={{ color: "#334155", borderBottom: "1px solid #f1f5f9" }}>
+              <td className="py-3 px-3 px-md-4 fw-medium user-cell">
                 {entry.user}
               </td>
-              <td className="py-3 px-4 text-end" style={{ borderBottom: "1px solid #f1f5f9" }}>
+              <td className="py-3 px-3 px-md-4 text-end score-cell">
                 <span
-                  className="badge py-2 px-3 shadow-sm rounded-pill"
+                  className="badge score-badge"
                   style={{
                     background: idx === 0 ? "linear-gradient(135deg, #f59e0b, #ef4444)" :
                       idx < 3 ? "#3b82f6" : "#e2e8f0",
                     color: idx < 3 ? "white" : "#475569",
-                    fontSize: "0.9rem"
                   }}
                 >
-                  {entry.score}
+                  {entry.score}%
                 </span>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      <style>{`
+        .leaderboard-container {
+          border-radius: 12px;
+          overflow: hidden;
+          background: white;
+        }
+        .leaderboard-thead {
+          background-color: #f8fafc;
+          border-bottom: 1px solid #e2e8f0;
+        }
+        .leaderboard-thead th {
+          color: #64748b !important;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        .leaderboard-row td {
+          border-bottom: 1px solid #f1f5f9;
+          vertical-align: middle;
+        }
+        .rank-cell {
+          font-size: 1.05rem;
+          color: #1e293b;
+          width: 70px;
+        }
+        .user-cell {
+          color: #334155;
+          max-width: 150px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .score-badge {
+          padding: 6px 12px;
+          font-size: 0.85rem;
+          font-weight: 700;
+          border-radius: 20px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 576px) {
+          .rank-cell { width: 60px; font-size: 0.95rem; padding-left: 12px !important; }
+          .user-cell { font-size: 0.9rem; padding-left: 12px !important; }
+          .score-cell { padding-right: 12px !important; }
+          .score-badge { padding: 4px 10px; font-size: 0.75rem; }
+        }
+      `}</style>
     </div>
   );
 }

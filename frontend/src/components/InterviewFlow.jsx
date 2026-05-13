@@ -260,6 +260,21 @@ export default function InterviewFlow({ question, userName, onComplete }) {
           0%, 100% { opacity: 1; transform: scale(1); }
           50% { opacity: 0.5; transform: scale(1.3); }
         }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+          .d-flex.gap-3.flex-wrap {
+            gap: 10px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .btn-lg {
+            width: 100%;
+            padding: 11px 16px !important;
+            font-size: 0.95rem !important;
+          }
+        }
       `}</style>
     </div>
   );

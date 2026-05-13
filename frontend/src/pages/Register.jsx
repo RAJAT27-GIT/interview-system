@@ -96,7 +96,7 @@ const Register = () => {
                 </p>
             </div>
 
-            <style jsx>{`
+            <style>{`
                 .login-container {
                     display: flex;
                     justify-content: center;
@@ -104,22 +104,23 @@ const Register = () => {
                     min-height: 100vh;
                     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
                     color: white;
+                    padding: 20px;
                 }
                 .login-card {
                     background: rgba(255, 255, 255, 0.05);
                     backdrop-filter: blur(10px);
-                    padding: 40px;
+                    padding: 40px 36px;
                     border-radius: 20px;
                     width: 100%;
-                    max-width: 400px;
+                    max-width: 420px;
                     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
                     border: 1px solid rgba(255,255,255,0.1);
                 }
-                h2 { margin-bottom: 10px; font-size: 2rem; }
-                p { color: #94a3b8; margin-bottom: 30px; }
+                .login-card h2 { margin-bottom: 10px; font-size: 2rem; }
+                .login-card p { color: #94a3b8; margin-bottom: 30px; }
                 .form-group { margin-bottom: 20px; text-align: left; }
-                label { display: block; margin-bottom: 8px; color: #cbd5e1; }
-                input, .role-select {
+                .form-group label { display: block; margin-bottom: 8px; color: #cbd5e1; font-size: 0.9rem; }
+                .form-group input, .form-group select, .role-select {
                     width: 100%;
                     padding: 12px;
                     border-radius: 8px;
@@ -127,19 +128,25 @@ const Register = () => {
                     background: rgba(255,255,255,0.05);
                     color: white;
                     outline: none;
+                    font-size: 1rem;
                 }
-                input:focus, .role-select:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); }
+                .form-group input:focus, .form-group select:focus, .role-select:focus {
+                    border-color: #3b82f6;
+                    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+                }
                 .role-select option { background: #1e293b; color: white; }
                 .login-btn {
                     width: 100%;
-                    padding: 12px;
+                    padding: 13px;
                     background: #3b82f6;
                     color: white;
                     border: none;
                     border-radius: 8px;
                     font-weight: 600;
+                    font-size: 1rem;
                     cursor: pointer;
                     transition: background 0.3s;
+                    margin-top: 4px;
                 }
                 .login-btn:hover { background: #2563eb; }
                 .error-message {
@@ -149,9 +156,18 @@ const Register = () => {
                     border-radius: 8px;
                     margin-bottom: 20px;
                     border: 1px solid rgba(239, 68, 68, 0.3);
+                    font-size: 0.9rem;
                 }
-                .auth-footer { margin-top: 20px; font-size: 0.9rem; }
+                .auth-footer { margin-top: 20px; font-size: 0.9rem; color: #94a3b8; text-align: center; }
                 .auth-footer a { color: #3b82f6; text-decoration: none; }
+
+                @media (max-width: 480px) {
+                    .login-card {
+                        padding: 28px 20px;
+                        border-radius: 16px;
+                    }
+                    .login-card h2 { font-size: 1.6rem; }
+                }
             `}</style>
         </div>
     );
