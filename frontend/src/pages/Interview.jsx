@@ -315,8 +315,32 @@ const Interview = () => {
 
           {/* ──── PHASE 2: ACTIVE INTERVIEW ──── */}
           {step === "active" && session && (
-            <div className="row justify-content-center">
-              <div className="col-lg-10">
+            <div className="row">
+              {/* Side Navbar (Rounds) */}
+              <div className="col-lg-3 mb-4 mb-lg-0">
+                <div className="ui-card p-3 h-100 shadow-sm side-navbar-container">
+                  <h6 className="fw-bold mb-3 px-2 border-bottom pb-2 d-none d-lg-block">Interview Stages</h6>
+                  <div className="round-tracker-side">
+                    {session.rounds.map((r, idx) => (
+                      <div key={r.id} className={`round-tab-side ${idx === currentRoundIdx ? "active" : idx < currentRoundIdx ? "done" : ""}`}>
+                        <div className="round-icon">
+                          {ROUND_ICONS[r.icon] || ROUND_ICONS[r.type] || <FaGraduationCap />}
+                        </div>
+                        <div className="text-start ms-2 ms-lg-3 round-tab-text">
+                          <div className="round-tab-label fw-bold">{r.name}</div>
+                          <small className="d-none d-lg-block opacity-75" style={{fontSize: '0.75rem'}}>
+                            {idx < currentRoundIdx ? 'Completed' : idx === currentRoundIdx ? 'In Progress' : 'Pending'}
+                          </small>
+                        </div>
+                        {idx < currentRoundIdx && <FaCheckCircle className="d-none d-lg-block ms-auto text-success" />}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Main Content */}
+              <div className="col-lg-9">
                 {/* Proctoring Status Bar */}
                 <div className="proctor-bar">
                   <div className="proctor-bar-left">
@@ -329,18 +353,6 @@ const Interview = () => {
                       {violations}/{MAX_VIOLATIONS} Violations
                     </span>
                   </div>
-                </div>
-
-                {/* Round Tracker */}
-                <div className="round-tracker">
-                  {session.rounds.map((r, idx) => (
-                    <div key={r.id} className={`round-tab ${idx === currentRoundIdx ? "active" : idx < currentRoundIdx ? "done" : ""}`}>
-                      <div className="round-icon">
-                        {ROUND_ICONS[r.icon] || ROUND_ICONS[r.type] || <FaGraduationCap />}
-                      </div>
-                      <span className="d-none d-md-block ms-2 round-tab-label">{r.name}</span>
-                    </div>
-                  ))}
                 </div>
 
                 <div className="ui-card shadow-sm p-0 overflow-hidden">
@@ -549,30 +561,26 @@ const Interview = () => {
         .violation-badge.warn { background: #f59e0b; color: #1e293b; }
         .violation-badge.critical { background: #ef4444; color: white; }
 
-        /* Round Tracker */
-        .round-tracker {
-          display: flex; justify-content: space-between;
-          margin-bottom: 16px; padding: 0 2px; gap: 5px;
-          overflow-x: auto;
+        /* Side Navbar / Round Tracker */
+        .round-tracker-side {
+          display: flex; flex-direction: column; gap: 8px;
         }
-        .round-tab {
-          flex: 1; text-align: center; padding: 12px 6px;
+        .round-tab-side {
+          display: flex; align-items: center; padding: 12px 16px;
           background: #fff; border-radius: 12px;
           border: 1px solid #e2e8f0; transition: all 0.3s;
-          display: flex; align-items: center; justify-content: center;
-          font-weight: 600; color: #64748b; font-size: 0.85rem;
-          min-width: 44px;
+          color: #64748b;
         }
-        .round-tab.active {
-          background: #3b82f6; color: #fff;
-          border-color: #3b82f6; transform: scale(1.03);
-          box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+        .round-tab-side.active {
+          background: #eff6ff; color: #1e40af;
+          border-color: #3b82f6; border-left: 4px solid #3b82f6;
+          box-shadow: 0 4px 12px rgba(59,130,246,0.1);
         }
-        .round-tab.done {
-          background: #dcfce7; color: #166534; border-color: #bbf7d0;
+        .round-tab-side.done {
+          background: #f0fdf4; color: #166534; border-color: #bbf7d0;
         }
-        .round-icon { font-size: 1.1rem; }
-        .round-tab-label { font-size: 0.75rem; }
+        .round-icon { font-size: 1.2rem; }
+        .round-tab-label { font-size: 0.9rem; line-height: 1.2; }
 
         /* Active Round Header */
         .active-round-header {
@@ -591,9 +599,23 @@ const Interview = () => {
 
         @media (min-width: 768px) { .border-end-sm { border-right: 1px solid #e2e8f0; } }
 
+        @media (max-width: 991px) {
+          .round-tracker-side {
+            flex-direction: row; overflow-x: auto; padding-bottom: 8px; gap: 10px;
+          }
+          .round-tab-side {
+            flex: 0 0 auto; min-width: 150px; padding: 10px 14px; margin-bottom: 0;
+            justify-content: flex-start; text-align: left;
+            border-left: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;
+          }
+          .round-tab-side.active { 
+            border-left: 1px solid #3b82f6; 
+            border-bottom: 4px solid #3b82f6; 
+          }
+        }
+
         @media (max-width: 768px) {
-          .round-tab-label { display: none !important; }
-          .round-tab { padding: 10px 4px; }
+          .round-tab-label { display: block !important; font-size: 0.85rem; }
           .interview-bg { padding-top: 20px !important; padding-bottom: 20px !important; }
           .ui-card { border-radius: 14px; }
           .p-4 { padding: 14px !important; }
