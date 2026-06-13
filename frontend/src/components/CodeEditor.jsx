@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API = "http://localhost:8000";
+const API = "http://https://interview-system-1.onrender.com:8000";
 
 export default function CodeEditor({ question, userName, onComplete }) {
   const [language, setLanguage] = useState("python");

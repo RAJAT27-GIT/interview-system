@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:8000";
+const API = "http://https://interview-system-1.onrender.com:8000";
 
 export default function InterviewFlow({ question, userName, onComplete }) {
   const [ttsUrl, setTtsUrl] = useState(null);

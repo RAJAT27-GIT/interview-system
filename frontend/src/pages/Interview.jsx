@@ -12,7 +12,7 @@ import {
   FaExclamationTriangle
 } from "react-icons/fa";
 
-const API = "http://localhost:8000";
+const API = "http://https://interview-system-1.onrender.com:8000";
 const MAX_VIOLATIONS = 3;
 
 const ROUND_ICONS = {

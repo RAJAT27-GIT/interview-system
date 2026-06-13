@@ -8,7 +8,7 @@ export default function DifficultySelector({ onQuestionSelected }) {
   const fetchQuestion = async (tierLevel) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8000/questions?tier=${tierLevel}&count=1`);
+      const res = await fetch(`http://https://interview-system-1.onrender.com:8000/questions?tier=${tierLevel}&count=1`);
       const data = await res.json();
 
       if (data && data.length > 0) {

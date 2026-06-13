@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://https://interview-system-1.onrender.com:27017")
 DB_NAME = os.getenv("DB_NAME", "interview_system")
 
 client = AsyncIOMotorClient(MONGO_URI)

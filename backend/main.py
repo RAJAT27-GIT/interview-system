@@ -36,7 +36,7 @@ from fastapi import HTTPException, Depends, Header
 # ✅ Single FastAPI instance
 app = FastAPI()
 
-# ✅ CORS FIX — allows React frontend (localhost:5173) to access backend
+# ✅ CORS FIX — allows React frontend (https://interview-system-1.onrender.com:5173) to access backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

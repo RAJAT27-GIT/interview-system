@@ -80,7 +80,7 @@ Start the FastAPI server:
 ```bash
 uvicorn main:app --reload
 ```
-The backend will run on `http://localhost:8000`.
+The backend will run on `http://https://interview-system-1.onrender.com:8000`.
 
 ### 3. Frontend Setup
 Open a new terminal, navigate to the frontend directory, install dependencies, and start the development server.
@@ -94,7 +94,7 @@ npm install
 # Start the Vite development server
 npm run dev
 ```
-The frontend will run on `http://localhost:5173`.
+The frontend will run on `http://https://interview-system-1.onrender.com:5173`.
 
 ---
 

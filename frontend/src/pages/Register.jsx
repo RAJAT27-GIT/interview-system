@@ -25,7 +25,7 @@ const Register = () => {
             if (role === 'admin') {
                 payload.admin_secret = adminSecret;
             }
-            const response = await axios.post('http://localhost:8000/auth/register', payload);
+            const response = await axios.post('http://https://interview-system-1.onrender.com:8000/auth/register', payload);
             login({ name: response.data.name, role: response.data.role }, response.data.access_token);
             navigate('/');
         } catch (err) {

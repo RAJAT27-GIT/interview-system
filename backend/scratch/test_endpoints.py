@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "http://https://interview-system-1.onrender.com:8000"
 
 def test_auth():
     print("Testing Registration...")

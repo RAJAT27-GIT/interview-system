@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "./Footer";
 import { FaCheckCircle, FaTimesCircle, FaLightbulb, FaUserTie, FaCheck, FaExclamationTriangle } from "react-icons/fa";
 
-const API = "http://localhost:8000";
+const API = "http://https://interview-system-1.onrender.com:8000";
 
 const ResumeCheck = () => {
   const [file, setFile] = useState(null);

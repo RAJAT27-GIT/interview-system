@@ -7,7 +7,7 @@ export default function Leaderboard() {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const res = await fetch("http://localhost:8000/leaderboard?top_n=10");
+        const res = await fetch("http://https://interview-system-1.onrender.com:8000/leaderboard?top_n=10");
         const leaderboardData = await res.json();
         setData(leaderboardData);
       } catch (err) {

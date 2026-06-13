@@ -23,13 +23,13 @@ const AdminDashboard = () => {
         setLoading(true);
         try {
             if (activeTab === 'activity') {
-                const res = await axios.get('http://localhost:8000/admin/activity', { headers });
+                const res = await axios.get('http://https://interview-system-1.onrender.com:8000/admin/activity', { headers });
                 setActivities(res.data);
             } else if (activeTab === 'questions') {
-                const res = await axios.get('http://localhost:8000/admin/questions', { headers });
+                const res = await axios.get('http://https://interview-system-1.onrender.com:8000/admin/questions', { headers });
                 setQuestions(res.data);
             } else if (activeTab === 'users' || activeTab === 'admins') {
-                const res = await axios.get('http://localhost:8000/admin/users', { headers });
+                const res = await axios.get('http://https://interview-system-1.onrender.com:8000/admin/users', { headers });
                 setUsers(res.data);
             }
         } catch (err) {
@@ -42,7 +42,7 @@ const AdminDashboard = () => {
         e.preventDefault();
         try {
             const tagsArray = newQuestion.tags.split(',').map(t => t.trim()).filter(t => t);
-            await axios.post('http://localhost:8000/admin/questions', { 
+            await axios.post('http://https://interview-system-1.onrender.com:8000/admin/questions', { 
                 ...newQuestion, 
                 tags: tagsArray 
             }, { headers });
@@ -56,7 +56,7 @@ const AdminDashboard = () => {
     const handleDeleteQuestion = async (id) => {
         if (!window.confirm('Are you sure?')) return;
         try {
-            await axios.delete(`http://localhost:8000/admin/questions/${id}`, { headers });
+            await axios.delete(`http://https://interview-system-1.onrender.com:8000/admin/questions/${id}`, { headers });
             fetchData();
         } catch (err) {
             alert('Failed to delete');
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
     const handleDeleteUser = async (id) => {
         if (!window.confirm('Are you sure you want to delete this user? This cannot be undone.')) return;
         try {
-            await axios.delete(`http://localhost:8000/admin/users/${id}`, { headers });
+            await axios.delete(`http://https://interview-system-1.onrender.com:8000/admin/users/${id}`, { headers });
             fetchData();
         } catch (err) {
             alert('Failed to delete user');
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
     const handleClearLogs = async () => {
         if (!window.confirm('Are you sure you want to clear all activity logs? This cannot be undone.')) return;
         try {
-            await axios.delete('http://localhost:8000/admin/activity', { headers });
+            await axios.delete('http://https://interview-system-1.onrender.com:8000/admin/activity', { headers });
             fetchData();
         } catch (err) {
             alert('Failed to clear logs');
